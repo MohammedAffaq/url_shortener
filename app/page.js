@@ -18,7 +18,7 @@ export default function Home() {
             The best URL shortener in the Market
           </p>
           <p className="px-27 text-center">
-            A URL shortener is a web tool that takes a long, complex URL and turns it into a short, easy-to-share link. It’s commonly used to simplify links for social media, emails, or print, and often includes features like click tracking, analytics, and custom aliases to enhance link management and branding.
+            A URL shortener is a web tool that takes a long, complex URL and turns it into a short, easy-to-share link. It is commonly used to simplify links for social media, emails, or print, and often includes features like click tracking, analytics, and custom aliases to enhance link management and branding.
           </p>
         <div className='flex gap-3'>
           <Link href="/shorten"><button className='bg-purple-500 text-white rounded-lg shadow-lg p-3 py-1 font-bold'>Try now</button></Link>
