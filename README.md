@@ -29,7 +29,7 @@ BitLinks is a modern, minimal, and efficient link shortener web app. It allows y
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/your-username/bitlinks.git
+git clone https://github.com/MohammedAffaq/bitlinks.git
 cd bitlinks
 ```
 
