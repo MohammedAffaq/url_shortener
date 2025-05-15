@@ -52,3 +52,10 @@ Visit http://localhost:3000 to view the app.
 - /shorten - Shorten the URL
 
 - /contact – Contact details (Gmail, LinkedIn, GitHub)
+
+## 💻 Screenshots
+Home Page
+![image](https://github.com/user-attachments/assets/81bca81a-0f6a-4257-b0c2-b03f69b3460b)
+
+
+
