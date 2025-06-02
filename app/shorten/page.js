@@ -40,29 +40,69 @@ const Shorten = () => {
 
 
   return (
-    <div className='mx-auto max-w-lg w-full bg-purple-100 rounded-lg my-10 p-6 sm:p-8 flex flex-col gap-5'>
-      <h1 className='font-bold text-xl sm:text-2xl text-center sm:text-left'>Generate your short URLs</h1>
-      <div className='flex flex-col gap-4'>
-        <input type="text"
-          value={url}
-          className='w-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-600 rounded-md'
-          placeholder='Enter your URL'
-          onChange={e => { setUrl(e.target.value) }} />
+    // <div className='mx-auto max-w-lg w-full bg-purple-100 rounded-lg my-10 p-6 sm:p-8 flex flex-col gap-5'>
+    //   <h1 className='font-bold text-xl sm:text-2xl text-center sm:text-left'>Generate your short URLs</h1>
+    //   <div className='flex flex-col gap-4'>
+    //     <input type="text"
+    //       value={url}
+    //       className='w-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-600 rounded-md'
+    //       placeholder='Enter your URL'
+    //       onChange={e => { setUrl(e.target.value) }} />
 
-        <input type="text"
-          value={shorturl}
-          className='w-full px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600'
-          placeholder='Enter your preferred short URL text'
-          onChange={e => { setshorturl(e.target.value) }} />
+    //     <input type="text"
+    //       value={shorturl}
+    //       className='w-full px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600'
+    //       placeholder='Enter your preferred short URL text'
+    //       onChange={e => { setshorturl(e.target.value) }} />
 
-        <button onClick={generate} className='w-full bg-purple-500 text-white rounded-md shadow-lg px-4 py-2 font-bold hover:bg-purple-600 transition'>Generate</button>
-      </div>
+    //     <button onClick={generate} className='w-full bg-purple-500 text-white rounded-md shadow-lg px-4 py-2 font-bold hover:bg-purple-600 transition'>Generate</button>
+    //   </div>
 
-      {generated && <>
-        <span className='font-bold text-lg mt-4 text-center sm:text-left'>Your Links</span>
-        <code className="break-words text-center sm:text-left">
-          <Link target="_blank" href={generated} className="text-purple-700 underline">{generated}</Link>
-        </code></>}
+    //   {generated && <>
+    //     <span className='font-bold text-lg mt-4 text-center sm:text-left'>Your Links</span>
+    //     <code className="break-words text-center sm:text-left">
+    //       <Link target="_blank" href={generated} className="text-purple-700 underline">{generated}</Link>
+    //     </code></>}
+    // </div>
+    <div className="min-h-screen flex flex-col bg-purple-200">
+      <main className="flex-grow flex justify-center items-center p-4">
+        <div className="w-full max-w-lg bg-purple-300 rounded-lg p-8 flex flex-col gap-4 shadow-md">
+          <h1 className="font-bold text-2xl">Generate your short URLs</h1>
+
+          <div className="flex flex-col gap-3">
+            <input
+              type="text"
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
+              className="px-4 py-2 rounded-md focus:outline-purple-600"
+              placeholder="Enter your URL"
+            />
+
+            <input
+              type="text"
+              value={shorturl}
+              onChange={(e) => setshorturl(e.target.value)}
+              className="px-4 py-2 rounded-md focus:outline-purple-600"
+              placeholder="Enter your preferred short URL text"
+            />
+
+            <button
+              onClick={generate}
+              className="bg-purple-500 rounded-lg shadow-lg p-3 py-1 font-bold text-white"
+            >
+              Generate
+            </button>
+          </div>
+
+          {generated && <>
+         <span className='font-bold text-lg mt-4 text-center sm:text-left'>Your Links</span>
+         <code className="break-words text-center sm:text-left">
+           <Link target="_blank" href={generated} className="text-purple-700 underline">{generated}</Link>
+         </code></>}
+        </div>
+      </main>
+
+      
     </div>
   )
 }
